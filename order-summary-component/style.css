@@ -1,0 +1,147 @@
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+
+    --shadowBlue: hsl(225, 94%, 86%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+p {
+    font-size: 16px;
+}
+
+@media (max-width: 375px) {
+    body {
+        background: url(./images/pattern-background-mobile.svg) fixed no-repeat top;
+        background-color: var(--paleBlue);
+    }
+}
+
+body {
+    background: url(./images/pattern-background-desktop.svg) fixed no-repeat top;
+    background-color: var(--paleBlue);
+}
+
+.card {
+    height: 550px;
+    width: 350px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 0 15px 10px var(--shadowBlue);
+}
+
+.card_content-top {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2rem;
+}
+
+.card_content-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card_content-center {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.card_content-center h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    color: var(--darkBlue);
+}
+
+.card_content-center p {
+    line-height: 1.4;
+    color: var(--desaturatedBlue);
+    margin-bottom: 1rem;
+}
+
+.plan {
+    background: var(--veryPaleBlue);
+    margin: 0 1rem;
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+    display: flex;
+}
+
+.plan_container {
+    display: flex;
+    align-items: center;
+}
+
+.sub_plan {
+    margin-left: 1rem;
+}
+
+.sub_plan p {
+    font-weight: 900;
+    color: var(--darkBlue);
+    line-height: 1.6;
+}
+ 
+.sub_plan span {
+    color: var(--desaturatedBlue);
+}
+
+.plan_cta {
+    margin-left: 5rem;
+    color: var(--brightBlue);
+    font-weight: 700;
+    transition: .2s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn {
+    background: var(--brightBlue);
+    padding: 1rem 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: 0 10px 10px var(--paleBlue);
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.secondary_btn {
+    color: var(--desaturatedBlue);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.plan_cta:hover {
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--desaturatedBlue);
+}
+
+.secondary_btn:hover {
+    color: var(--darkBlue);
+}
